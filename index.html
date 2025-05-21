@@ -5,6 +5,21 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  document.getElementById("letsGoBtn").addEventListener("click", function () {
+    // Hide landing page
+    document.getElementById("landing").classList.add("hidden");
+
+    // Show loading
+    document.getElementById("loading").classList.remove("hidden");
+
+    // Simulate loading for 3 seconds
+    setTimeout(() => {
+      document.getElementById("loading").classList.add("hidden");
+      document.getElementById("profile").classList.remove("hidden");
+    }, 3000); // 3 seconds
+  });
+</script>
 <body>
   <!-- Landing Page -->
   <section id="landing">
@@ -27,7 +42,7 @@
   </section>
 
   <!-- Profile Page -->
-  <section id="profile" class="profile-section">
+  <section id="profile" class="profile-section hidden">
     <div class="profile-container">
       <div class="profile-left">
         <img src="images/PAS-FOTO.png" alt="My Profile" class="profile-png">
