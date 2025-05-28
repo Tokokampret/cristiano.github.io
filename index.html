@@ -4,36 +4,23 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<script>
-  document.getElementById("letsGoBtn").addEventListener("click", function () {
-  // Sembunyikan halaman landing
-  document.getElementById("landing").classList.add("hidden");
-
-  // Tampilkan layar loading
-  document.getElementById("loading").classList.remove("hidden");
-
-  // Setelah 3 detik, sembunyikan loading dan tampilkan profil
-  setTimeout(() => {
-    document.getElementById("loading").classList.add("hidden");
-    document.getElementById("profile").classList.remove("hidden");
-  }, 3000);
-});
-
-</script>
 <body>
+
   <!-- Landing Page -->
   <section id="landing">
     <div class="landing-text">
       <h1>HELLO</h1>
       <h2>WELCOME TO MY PORTFOLIO</h2>
       <p>I hope you like the world that I have created,<br>thank you. Have a better day</p>
-      <button id="letsGoBtn">LETS GO ➤</button>
+      <button id="letsGoBtn">LET’S GO ➤</button>
     </div>
+    <div class="scroll-down">↓</div>
   </section>
 
-  <!-- Loading Screen -->
-  <section id="loading" class="hidden">
+  <!-- Loading Section -->
+  <section id="loading">
     <div class="pacman-loader">
       <div class="pacman"></div>
       <div class="dots">
@@ -42,20 +29,50 @@
     </div>
   </section>
 
-  <!-- Profile Page -->
-  <section id="profile" class="profile-section hidden">
+  <!-- Profile Section -->
+  <section id="profile">
     <div class="profile-container">
       <div class="profile-left">
-        <img src="images/PAS-FOTO.png" alt="My Profile" class="profile-png">
+        <img src="images/PAS-FOTO.png" alt="My Profile">
       </div>
       <div class="profile-right">
-        <h2>HI,<br>I’M ALDO</h2>
+        <h2>HI, I’M ALDO</h2>
         <h3>UWDP STUDENT</h3>
-        <p>Learning Front-End Development & UI/UX Design.</p>
+        <p>Learning Front-End Development & UI/UX Design.<br>
+          Passionate about creating interactive and beautiful web experiences.</p>
         <button>GET TO KNOW ME</button>
       </div>
     </div>
   </section>
+
+  <!-- About Me Section -->
+<section id="about">
+  <div class="about-container">
+    <h2>About me</h2>
+    <p>
+      Hello! I’m Cristiano Ronaldo, a college student currently studying Digital Business at UNIVERSITAS WIDYA DHARMA.
+      <br><br>
+      I’m passionate about learning new skills, working on creative projects, and building a strong foundation for my future career.
+      <br><br>
+      Throughout my academic journey, I’ve developed an interest in Entrepreneurship, Business Management, Digital Marketing, and Sales, and I love applying what I learn in class to real-world projects.
+      <br><br>
+      I’m eager to grow both personally and professionally, and I’m always open to new opportunities that challenge me and help me learn more.
+      <br><br>
+      In my free time, I enjoy graphic design & pool, and collaborating with others on innovative ideas.
+      <br><br>
+      I’m excited about what lies ahead and look forward to making a positive impact wherever I go!
+    </p>
+  <div class="pacman-icons">
+  <img src="images/red.png" alt="Red Ghost">
+  <img src="images/pink.png" alt="Pink Ghost">
+  <img src="images/blue.png" alt="Blue Ghost">
+  <img src="images/yellow.png" alt="Yellow Ghost">
+</div>
+</section>
+
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑</button>
 
   <script src="script.js"></script>
 </body>

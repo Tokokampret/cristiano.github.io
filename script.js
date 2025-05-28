@@ -1,13 +1,24 @@
+// Scroll to profile
 document.getElementById("letsGoBtn").addEventListener("click", function () {
-  // Sembunyikan halaman landing
-  document.getElementById("landing").classList.add("hidden");
+  document.getElementById("profile").scrollIntoView({ behavior: "smooth" });
+});
 
-  // Tampilkan layar loading
-  document.getElementById("loading").classList.remove("hidden");
+// Scroll to About section on "GET TO KNOW ME"
+document.querySelector("#profile button").addEventListener("click", function () {
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+});
 
-  // Setelah 3 detik, sembunyikan loading dan tampilkan profil
-  setTimeout(() => {
-    document.getElementById("loading").classList.add("hidden");
-    document.getElementById("profile").classList.remove("hidden");
-  }, 3000);
+// Show Back to Top button on scroll
+window.addEventListener("scroll", function () {
+  const backToTop = document.getElementById("backToTop");
+  if (window.scrollY > window.innerHeight) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+
+// Scroll to top when button clicked
+document.getElementById("backToTop").addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
