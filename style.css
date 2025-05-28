@@ -12,6 +12,13 @@ body {
   background: #000;
   color: #fff;
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Sections */
 section {
   min-height: 100vh;
   display: flex;
@@ -21,6 +28,8 @@ section {
   text-align: center;
   position: relative;
 }
+
+/* Buttons */
 button {
   background: #ffcc00;
   color: #000;
@@ -39,7 +48,7 @@ button:hover {
 
 /* Landing */
 #landing {
-  background: url('images/hd-pacman-89hxxcwpuzrseueo.jpg') no-repeat center center/cover;
+  background: url('images/hd-pacman-89hxxcwpuzrseueo.jpg') no-repeat center center / cover;
   flex-direction: column;
 }
 .landing-text h1 {
@@ -144,6 +153,42 @@ button:hover {
   line-height: 1.6;
 }
 
+/* About */
+#about {
+  background: #000;
+  color: #fff;
+  flex-direction: column;
+}
+.about-container {
+  max-width: 800px;
+  text-align: left;
+}
+.about-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.about-container p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.pacman-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.pacman-icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.pacman-icons img:hover {
+  transform: scale(1.2);
+}
+
 /* Back to Top */
 #backToTop {
   position: fixed;
@@ -164,6 +209,7 @@ button:hover {
   background: #ffaa00;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column;
@@ -171,61 +217,14 @@ button:hover {
   .profile-right {
     text-align: center;
   }
-  /* About Section */
-#about {
-  background: #000;
-  color: #fff;
-  flex-direction: column;
-}
-.about-container {
-  max-width: 800px;
-  text-align: left;
-}
-.about-container h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.about-container p {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-.pacman-icons img {
-  width: 40px;
-  margin: 0 5px;
-  transition: transform 0.3s ease;
-}
-.pacman-icons img:hover {
-  transform: scale(1.2);
 }
 
-.pacman-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px; /* spasi antar ikon */
-  margin-top: 20px;
+#backToTop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
-
-.pacman-icons img {
-  width: 50px;  /* atur lebar gambar */
-  height: auto; /* biar proporsional */
-  transition: transform 0.3s ease;
-}
-
-.pacman-icons img:hover {
-  transform: scale(1.2);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.pacman-icons img {
-  width: 50px !important;
-  height: auto !important;
-}
-
-
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
 }
