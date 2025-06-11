@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Navigation Bar -->
+  <header id="navbar">
+    <div class="logo">Aldo.</div>
+    <nav>
+      <a href="#landing">Home</a>
+      <a href="#profile">Profile</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </header>
 
   <!-- Landing Page -->
   <section id="landing">
@@ -20,7 +34,7 @@
   </section>
 
   <!-- Loading Section -->
-  <section id="loading">
+  <section id="loading" class="active">
     <div class="pacman-loader">
       <div class="pacman"></div>
       <div class="dots">
@@ -33,43 +47,61 @@
   <section id="profile">
     <div class="profile-container">
       <div class="profile-left">
-        <img src="images/PAS-FOTO.png" alt="My Profile">
+        <img src="images/PAS-FOTO.png" alt="My Profile" />
       </div>
       <div class="profile-right">
         <h2>HI, I’M ALDO</h2>
         <h3>UWDP STUDENT</h3>
         <p>Learning Front-End Development & UI/UX Design.<br>
-          Passionate about creating interactive and beautiful web experiences.</p>
+        Passionate about creating interactive and beautiful web experiences.</p>
         <button>GET TO KNOW ME</button>
       </div>
     </div>
   </section>
-  
-  <!-- About Me Section -->
-<section id="about">
-  <div class="about-container">
-    <h2>About me</h2>
-    <p>
-      Hello! I’m Cristiano Ronaldo, a college student currently studying Digital Business at UNIVERSITAS WIDYA DHARMA.
-      <br><br>
-      I’m passionate about learning new skills, working on creative projects, and building a strong foundation for my future career.
-      <br><br>
-      Throughout my academic journey, I’ve developed an interest in Entrepreneurship, Business Management, Digital Marketing, and Sales, and I love applying what I learn in class to real-world projects.
-      <br><br>
-      I’m eager to grow both personally and professionally, and I’m always open to new opportunities that challenge me and help me learn more.
-      <br><br>
-      In my free time, I enjoy graphic design & pool, and collaborating with others on innovative ideas.
-      <br><br>
-      I’m excited about what lies ahead and look forward to making a positive impact wherever I go!
-    </p>
-    <div class="pacman-icons">
-      <img src="images/red.png" alt="Red Ghost">
-      <img src="images/pink.png" alt="Pink Ghost">
-      <img src="images/blue.png" alt="Blue Ghost">
-      <img src="images/yellow.png" alt="Yellow Ghost">
-    </div>
-</section>
 
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="about-container">
+      <h2>About me</h2>
+      <p>Hello! I’m Cristiano Ronaldo, a college student currently studying Digital Business at UNIVERSITAS WIDYA DHARMA...</p>
+      <div class="pacman-icons">
+        <img src="images/red.png" alt="Red Ghost">
+        <img src="images/pink.png" alt="Pink Ghost">
+        <img src="images/blue.png" alt="Blue Ghost">
+        <img src="images/yellow.png" alt="Yellow Ghost">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio website to showcase my work and skills.</p>
+      </div>
+      <div class="project-card">
+        <h3>UI Design Concept</h3>
+        <p>Modern UI/UX design concepts for mobile and web applications.</p>
+      </div>
+      <div class="project-card">
+        <h3>Business Plan Presentation</h3>
+        <p>Crafted a professional business plan with strong visual storytelling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="#">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <!-- Back to Top Button -->
   <button id="backToTop" aria-label="Back to Top">↑</button>
